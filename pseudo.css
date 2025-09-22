@@ -1,0 +1,65 @@
+input[type="text"]{
+
+border:2px solid red;
+
+}
+
+input[type="password"]{
+
+border:2px dashed green;
+
+}
+
+ul>li{
+
+color:blue;
+
+}
+
+h1+p+p{
+
+background-color: aqua;
+
+}
+
+a:hover{
+
+color:red;
+
+}
+
+li:nth-child(1){
+
+background-color: blueviolet;
+
+}
+
+div:not(.c1){
+
+background-color: aquamarine;
+
+}
+
+.c1::AFTER{
+
+content:"*";
+
+COLOR:RED;
+
+}
+
+.c1::BEFORE {
+
+content: "*";
+
+COLOR: RED;
+
+}
+
+.P1::first-letter{
+
+COLOR:ORANGE;
+
+font-size: 40PX;
+
+}
