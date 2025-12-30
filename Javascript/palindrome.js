@@ -9,4 +9,4 @@ function palindrome(myString){
         document.write("<div>"+myString+" is not a palindrome<div>")
     }
 }
-palindrome("racecar")
+palindrome("01010")
