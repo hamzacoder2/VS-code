@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <!--Slide show-->
+    <section>
+        <img class="mySlides" src="2117697-3840x2160-desktop-4k-dark-wallpaper.jpg" style="height:300px">
+        <img class="mySlides" src="mountains-landscape-dark-nature-4k-i0.jpg" style="height:300px">
+    </section>
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+
+            for(i=0; i< x.length;i++){
+                x[i].style.display="none";
+            }
+
+            myIndex++;
+            if(myIndex>x.length){
+                myIndex=1;
+            }
+            x[myIndex-1].style.display="block";
+            setTimeout(carousel,3000);
+        }
+    </script>
+</body>
+</html>
