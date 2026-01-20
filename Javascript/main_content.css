@@ -1,0 +1,61 @@
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('BMW+M4+Liberty+Walk.jpg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('mountains-landscape-dark-nature-4k-i0.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('2117697-3840x2160-desktop-4k-dark-wallpaper.jpg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: right;
+    padding: 50px 100px;
+}
+.section-light{
+    background-color: whitesmoke;
+    color: #666;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+.ptext .border.trans{
+    background-color: transparent;
+}
+@media(max-width:568px){
+    .pimg1,
+    .pimg2,
+    .pimg3{
+        background-attachment: scroll;
+    }
+}
