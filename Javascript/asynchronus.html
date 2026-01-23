@@ -1,12 +1,33 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        <h2>Convert a Javascript object into a json string, and send it to the  server.</h2>
-        <p id="result"></p>
-        <script>
-            var myObj={ name:"Hamza",age:"13",grade:"7"};
-            var myJSON=JSON.stringify(myObj); //converts object to JSON for sending data
-            var newObj=JSON.parse(myJSON);//converts JSON into object while receiving data
-            document.getElementById("result").innerHTML=newObj.name;
-        </script>
-    </body>
+<head>
+    <title>Async Await Demo</title>
+    <style>
+        body { text-align: center; font-family: Arial; margin-top: 80px; }
+        #result { font-size: 20px; }
+    </style>
+</head>
+<body>
+
+<h2>Async and Await Example</h2>
+<button onclick="startTask()">Start Task</button>
+<p id="result"></p>
+
+<script>
+    function delay() {
+        return new Promise(function(resolve) {
+            setTimeout(function() {
+                resolve("Task Completed After 3 Seconds ✅");
+            }, 3000);
+        });
+    }
+
+    async function startTask() {
+        document.getElementById("result").innerHTML = "Task Started...";
+        let message = await delay();
+        document.getElementById("result").innerHTML = message;
+    }
+</script>
+
+</body>
 </html>
