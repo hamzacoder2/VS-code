@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Info using DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Student Details</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br>
+    <input type="number" id="age" placeholder="Enter Age"><br>
+    <input type="text" id="subject" placeholder="Favorite Subject"><br><br>
+
+    <button onclick="showInfo()">
