@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perimeter Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 180px;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Perimeter Calculator (Rectangle)</h2>
+
+    <input type="number" id="length" placeholder="Enter Length"><br>
+    <input type="number" id="width" placeholder="Enter Width"><br><br>
+
+    <button onclick="calculatePerimeter()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculatePerimeter() {
+            let l = document.getElementById("length").value;
+            let w = document.getElementById("width").value;
+
+            let result = document.getElementById("result");
+
+            if (l === "" || w === "") {
+                result.style.color = "red";
+                result.innerHTML = "Please enter both values!";
+            } else {
+                let perimeter = 2 * (Number(l) + Number(w));
+                result.style.color = "blue";
+                result.innerHTML = "Perimeter = " + perimeter;
+            }
+        }
+    </script>
+
+</body>
+</html>
