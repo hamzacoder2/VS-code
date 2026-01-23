@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h2 style="color: crimson;">Javascript Object properties</h2>
-        <p>There are two different ways to access an object property:</p>
-        <p>you can use .property or ["property"].</p>
+<head>
+    <title>Sum of Arguments & Trigonometry</title>
+    <style>
+        body { text-align: center; font-family: Arial; margin-top: 60px; }
+        button { padding: 10px 18px; font-size: 16px; }
+        p { font-size: 18px; }
+    </style>
+</head>
+<body>
 
-        <p id="demo"></p>
+<h2>Sum of Arguments</h2>
+<button onclick="sumArgs(10, 20, 30, 40)">Find Sum</button>
+<p id="sum"></p>
 
-        <script>
-            var person ={
-                firstname:"Hamza",
-                age: 20,
-            };
+<h2>Trigonometric Values</h2>
+<input type="number" id="angle" placeholder="Enter angle in degrees">
+<br><br>
+<button onclick="showTrig()">Show Trigonometric Values</button>
 
-            document.getElementById("demo").innerHTML=person.firstname + "is" + person["age"] + "years old.";
-        </script>
-    </body>
+<p id="trig"></p>
+
+<script>
+    function sumArgs() {
+        let total = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            total += arguments[i];
+        }
+        document.getElementById("sum").innerHTML = "Sum = " + total;
+    }
+
+    function showTrig() {
+        let deg = document.getElementById("angle").value;
+        let rad = deg * (Math.PI / 180);
+
+        let sin = Math.sin(rad).toFixed(2);
+        let cos = Math.cos(rad).toFixed(2);
+        let tan = Math.tan(rad).toFixed(2);
+
+        document.getElementById("trig").innerHTML =
+            "Sin: " + sin + "<br>Cos: " + cos + "<br>Tan: " + tan;
+    }
+</script>
+
+</body>
 </html>
