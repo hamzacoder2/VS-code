@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stop Changing Numbers</title>
+</head>
+<body>
+
+    <h1>Rolling Dice App</h1>
+
+    <h2 id="number">🎲</h2>
+    <p id="status">Click the button to start</p>
+
+    <button onclick="handleClick()">CLICK ME</button>
+
+    <script>
+        let interval = null;
+        let clickCount = 0;
+
+        function startRolling() {
+            interval = setInterval(() => {
+                let randomNum = Math.floor(Math.random() * 6) + 1;
+                document.getElementById("number").innerHTML = randomNum;
+            }, 200);
+            document.getElementById("status").innerHTML = "Rolling...";
+        }
+
+        function stopRolling() {
+            clearInterval(interval);
+            interval = null;
+            document.getElementById("status").innerHTML = "Stopped!";
+        }
+
+        function handleClick() {
+            clickCount++;
+
+            if (clickCount % 2 === 0) {
+                // Even click → START
+                if (interval === null) {
+                    startRolling();
+                }
+            } else {
+                // Odd click → STOP
+                stopRolling();
+            }
+        }
+    </script>
+
+</body>
+</html>
