@@ -1,0 +1,26 @@
+#input a number
+num = int(input("enter the number: "))
+t = num
+numLen = 0
+#iterate the loop   
+while t>0:
+    numLen = numLen+1
+    t = int(t/10)
+
+if numLen>=4: #condition1
+    numLen=int(numLen/2)
+    chk = 0
+    while num>0: #iterate loop
+        rem = num%10
+        if chk==numLen: #nestedcondition1
+          midOne = rem
+        elif chk==(numLen-1):
+          midTwo = rem
+        num = int(num/10)
+        chk = chk+1
+    prod= midOne*midTwo #products of middle digits
+#display the result
+    print("\nproduct of mid digits("+str(midOne)+"*"+str(midTwo)+")=",prod)
+
+else:
+   print("\nIt's not a 4 or more than a 4 digitnumber!")
